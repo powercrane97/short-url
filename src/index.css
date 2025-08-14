@@ -23,6 +23,21 @@
   --gray-950: hsl(260, 8%, 14%);
 }
 
+@layer utilities {
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@layer base {
+  a {
+    color: var(--gray-500);
+    text-decoration: none;
+  }
+}
+
 body {
   font-size: 1rem;
   color: var(--gray-950);
@@ -30,16 +45,18 @@ body {
   background: #fff;
   font-family: inherit;
   line-height: 1.5;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   flex-direction: column;
 }
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 4rem;
 }
