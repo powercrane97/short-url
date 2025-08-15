@@ -5,6 +5,7 @@ import FeatureCard from './components/FeatureCard'
 import CallToAction from './components/CallToAction'
 import Footer from './components/Footer'
 import data from './data.json'
+import Stats from './components/Stats'
 
 function App() {
   
@@ -13,10 +14,11 @@ function App() {
       <Header />
       <Hero />
       <LinkShortener />
-      <div className='flex mb-10'>
+      <Stats/>
+      <div className='flex mb-10 justify-between flex-wrap'>
         {data.map(feature =>
           <FeatureCard key={feature.heading} heading={feature.heading}
-            description={feature.description}/>)}
+            description={feature.description} icon="--icon-brand" />)}
       </div>
       <CallToAction heading="Boost your links today" />
       <Footer/>

@@ -21,6 +21,9 @@
   --gray-500: hsl(257, 7%, 63%);
   --gray-900: hsl(255, 11%, 22%);
   --gray-950: hsl(260, 8%, 14%);
+  --icon-brand: url('./assets/icon-brand-recognition.svg');
+  --icon-detailed: url('./assets/icon-detailed-records.svg');
+  --icon-fully: url('./assets/icon-fully-customizable.svg');
 }
 
 @layer utilities {
@@ -36,16 +39,28 @@
     color: var(--gray-500);
     text-decoration: none;
   }
+
+  a:hover {
+    color: var(--purple-950);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: black
+  }
 }
 
 body {
   font-size: 1rem;
-  color: var(--gray-950);
+  background-color: white;
   width: 100%;
-  background: #fff;
   font-family: inherit;
   line-height: 1.5;
   flex-direction: column;
+  background-image: url('./assets/illustration-working.svg');
+  background-repeat: no-repeat;
+  background-position: 110% 10%;
+  background-size: 600px;
+
 }
 
 body {
@@ -57,6 +72,49 @@ body {
 
 .app {
   width: 100%;
-  max-width: 1200px;
-  padding: 0 4rem;
+  /* max-width: 1072px; */
+  padding: 0 10rem;
 }
+
+.shortener {
+  background: var(--purple-950) url('./assets/bg-shorten-desktop.svg') no-repeat center;
+  background-size: cover;
+}
+
+.call-to-action {
+  position: relative;
+  background: var(--purple-950) url('./assets/bg-shorten-desktop.svg') no-repeat center;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* In your CSS file or @layer components */
+@layer components {
+  .footer-links a {
+    @apply transition-colors duration-250;
+  }
+  
+  .footer-links a:hover {
+    @apply text-(--blue-400);
+  }
+
+  .footer-links svg {
+    @apply transition-colors duration-250;
+  }
+  
+  .footer-links svg:hover {
+    @apply text-(--blue-400);
+  }
+}
+
+
+/* .call-to-action::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--purple-950) url('./assets/bg-shorten-desktop.svg') no-repeat center;
+  z-index: -1;
+} */
