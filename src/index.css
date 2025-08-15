@@ -18,6 +18,7 @@
   --purple-950: hsl(257, 27%, 26%);
   --red-400: hsl(0, 87%, 67%);
   --gray-400: hsl(0, 0%, 75%);
+  --gray-background: hsl(0, 0%, 95%);
   --gray-500: hsl(257, 7%, 63%);
   --gray-900: hsl(255, 11%, 22%);
   --gray-950: hsl(260, 8%, 14%);
@@ -31,6 +32,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -73,7 +78,7 @@ body {
 .app {
   width: 100%;
   /* max-width: 1072px; */
-  padding: 0 10rem;
+  /* padding: 0 10rem; */
 }
 
 .shortener {
@@ -81,7 +86,7 @@ body {
   background-size: cover;
 }
 
-.call-to-action {
+.call-to-action-bg {
   position: relative;
   background: var(--purple-950) url('./assets/bg-shorten-desktop.svg') no-repeat center;
   background-size: cover;
@@ -104,6 +109,10 @@ body {
   
   .footer-links svg:hover {
     @apply text-(--blue-400);
+  }
+
+  .content {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
 

@@ -6,6 +6,7 @@ import CallToAction from './components/CallToAction'
 import Footer from './components/Footer'
 import data from './data.json'
 import Stats from './components/Stats'
+import IconBrand from './assets/icon-brand-recognition.svg?react'
 
 function App() {
   
@@ -13,14 +14,16 @@ function App() {
     <>
       <Header />
       <Hero />
-      <LinkShortener />
-      <Stats/>
-      <div className='flex mb-10 justify-between flex-wrap'>
-        {data.map(feature =>
-          <FeatureCard key={feature.heading} heading={feature.heading}
-            description={feature.description} icon="--icon-brand" />)}
+      <div className="w-full bg-(--gray-background)">
+        <LinkShortener />
+        <Stats/>
+        <div className='flex mb-10 justify-between flex-wrap content'>
+          {data.map(feature =>
+            <FeatureCard key={feature.heading} heading={feature.heading}
+              description={feature.description} Icon={ IconBrand } />)}
+        </div>
+        <CallToAction heading="Boost your links today" />
       </div>
-      <CallToAction heading="Boost your links today" />
       <Footer/>
     </>
   )

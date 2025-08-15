@@ -6,7 +6,7 @@ import logo from '../assets/logo.svg';
 export default function Header(): JSX.Element {
   return (
     <>
-      <header className="mb-32 pt-10">
+      <header className="mb-32 pt-10 content">
         <nav className="flex justify-between">
           <div id="left-nav">
             <ul className="flex justify-between gap-4">
